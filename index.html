@@ -20,7 +20,7 @@
 	<script>
 		window.onload = () => {
 			window.location.search.substring(1).split('&').forEach((t) => {
-				document.querySelector('#text').innerHTML += t + '<br>'
+				document.querySelector('#text').innerHTML += decodeURI(t) + '<br>'
 			})
 		}
 	</script>
